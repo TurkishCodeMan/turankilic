@@ -52,6 +52,7 @@
   text-align: center;
   position: relative;
   margin-bottom: 1.5rem;
+  color: var(--color-text-black);
 }
 
 #hero dt::before {
@@ -125,6 +126,7 @@ dt.green::before {
 #hero .links {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
 
@@ -151,5 +153,8 @@ dt.green::before {
   }
   #hero .hero-brands ul {
     flex-flow: row wrap;
+  }
+  #hero .links {
+    flex-direction: row;
   }
 }

@@ -1,5 +1,5 @@
 a {
-  color: inherit;
+  color: var(--color-text-black);
   text-decoration: none;
 }
 
@@ -7,12 +7,11 @@ a {
   padding: 1rem 3rem;
 }
 
-@media (min-width:800px){
+@media (min-width: 800px) {
   .wrapper {
     padding: 5rem 13.5rem;
   }
 }
-
 
 /*Button*/
 .btn {
@@ -24,7 +23,7 @@ a {
     0px 1.85185px 3.14815px rgba(24, 167, 185, 0.0240741);
   border-radius: 40px 5px;
   padding: 2.2rem 7.7rem;
-  color: var(--color-white);
+  color: var(--color-text-black);
   transition: all 0.3s ease-in;
   outline: none;
   border: none;
@@ -32,8 +31,8 @@ a {
 
 .btn.outline {
   background: transparent;
-  border:1px solid  var(--color-main-blue) ;
-  color: #000;
+  border: 1px solid var(--color-main-blue);
+  color: var(--color-text-gray);
 }
 
 .btn:hover {
@@ -52,5 +51,13 @@ h1 {
   font-size: 2.5rem;
   line-height: 3.8rem;
   letter-spacing: -0.06em;
-  color: var(--color-main-blue)
+  color: var(--color-main-blue);
+}
+
+:has(body.dark) h2 {
+  filter: drop-shadow(1px 1px 3px var(--color-main-blue));
+}
+
+:has(body.dark) h1:not(footer h1) {
+  filter: drop-shadow(3px 3px 10px var(--color-main-blue));
 }

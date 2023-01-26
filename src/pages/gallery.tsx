@@ -1,9 +1,13 @@
 import { Layout } from "@/components/Layout";
+import { Navbar } from "@/components/Navbar/Navbar";
+import { Wrapper } from "@/components/Wrapper";
 
 export default function Gallery() {
   return (
-    <>
-      <Layout>Gallery</Layout>
-    </>
+    <Wrapper>
+      <Layout>
+        <Navbar/>
+      </Layout>
+    </Wrapper>
   );
 }

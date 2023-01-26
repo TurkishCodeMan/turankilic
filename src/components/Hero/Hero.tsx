@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 
@@ -16,8 +17,8 @@ export function Hero() {
             sunmayı ve teknolojiden üst düzeyde faydalandıran bir kuruluştur.
           </p>
           <div className="links">
-            <a className="btn">Explore</a>
-            <a className="btn outline">Contact Us</a>
+            <a className="btn" href="#whyus">Keşfet</a>
+            <a className="btn outline" href="#contact">İletişim</a>
           </div>
 
           <dl>

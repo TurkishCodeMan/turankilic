@@ -1,9 +1,25 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
-import { FaBackspace, FaHamburger } from "react-icons/fa";
+import { FaBackspace, FaHamburger, FaMoon, FaSun } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
+import { useLocalStorage } from "usehooks-ts";
 
 export function Navbar() {
+  const router = useRouter();
+  const path = router.pathname;
+  const [isDarkTheme, setDarkTheme] = useLocalStorage("dark-mode", true);
+
+
+  React.useEffect(()=>{
+    if(isDarkTheme) {
+      return window.document.body.classList.add('dark')
+    }
+    return window.document.body.classList.remove('dark')
+
+  },[isDarkTheme])
+
+
   return (
     <header>
       <div className="logo">
@@ -24,17 +40,34 @@ export function Navbar() {
           <FaBackspace size={25} style={{ marginRight: 4 }} />
         </a>
         <ul>
-          <li className="selected">
-            <Link href="#home">Anasayfa</Link>
+          <li className={path == "/" ? "selected" : ""}>
+            <Link href="/">Anasayfa</Link>
           </li>
           <li>
             <Link href="#whyus">Biz Kimiz</Link>
           </li>
-          <li>
+          <li className={path == "/gallery" ? "selected" : ""}>
             <Link href="/gallery">Galeri</Link>
           </li>
           <li>
-            <Link href="#contact-us">İletişim</Link>
+            <Link href="#contact">İletişim</Link>
+          </li>
+          <li>
+            <label htmlFor="dark">
+              <input
+                type="checkbox"
+                checked={isDarkTheme}
+                onChange={() => setDarkTheme((curr) => !curr)}
+                id="dark"
+              />
+              <span className="ball">
+                {isDarkTheme ? (
+                  <FaSun color="#F0BB00" />
+                ) : (
+                  <FaMoon color="#F0BB00" />
+                )}
+              </span>
+            </label>
           </li>
           <div className="vector">
             <img src="vector.png" alt="" />
@@ -42,10 +75,9 @@ export function Navbar() {
           <div className="vector">
             <img src="vector.png" alt="" />
           </div>
-          
         </ul>
       </nav>
-      <a href="#main-menu-toggle" className="backdrop" tabIndex={-1} hidden></a>
+      <a href="#" className="backdrop" tabIndex={-1} hidden></a>
     </header>
   );
 }

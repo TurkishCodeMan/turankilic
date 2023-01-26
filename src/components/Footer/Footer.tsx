@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -18,31 +19,27 @@ export function Footer() {
       <address>
         <a href="#home">Beydağı</a> İnşaat
         <br />
-        1954 Hekimhan, Meydan
+        Mehterçeşme mahallesi 1869.Sokak No:54/5
         <br />
-        Malatya, CA 44400
+        Istanbul
         <br />
-        +90 (123) 456
+        +90 (532) 509 69 44
         <br />
-        kaiju@example.com
+        turankilic44@gmail.com
         <br />
-        <a href="https://twitter.com/" >
-          Twitter
-        </a>
-        <br />
-        <a href="https://www.facebook.com/" >
-          Facebook
-        </a>
+        <FaTwitter size={30} style={{marginRight:15,marginTop:20}}/>
+        <FaInstagram size={30} style={{marginRight:15}}/>
+        <FaFacebook size={30}/>
       </address>
      
      </div>
      <p>
         <small>
-          Disclaimer: Beydağı İnşaat
+          Disclaimer: Beydağı İnşaat<br/>
           <a href="https://beydaginsaat.com/#home">
-            Beydağı İnşaat
-          </a>
-          by Hüseyin ALTIKULAÇ in 2023.
+            Beydağı İnşaat 
+          </a><br/>
+          Designed by <a href="">Hüseyin ALTIKULAÇ</a>
         </small>
       </p>
       <div className="vector"><img src="vector.png" alt="" /></div>

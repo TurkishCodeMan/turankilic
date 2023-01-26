@@ -9,6 +9,10 @@
     flex-direction: column;
 }
 
+#contact .btn {
+    box-shadow:var(--box-shadow-blue);
+}
+
 #contact iframe {
     margin-top: 6rem;
 }

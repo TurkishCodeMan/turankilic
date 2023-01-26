@@ -22,6 +22,7 @@
   line-height: 100%;
   font-weight: 500;
   margin-top: 5rem;
+  color: var(--color-text-black);
 }
 
 #whyus .content {
@@ -30,6 +31,11 @@
   flex-direction: column;
   align-items: center;
   gap: 6.8rem;
+}
+
+:has(body.dark) .content {
+  box-shadow:var(--box-shadow-blue);
+
 }
 
 #whyus dl {
@@ -55,22 +61,19 @@
   bottom: -3rem;
   z-index: -1;
   opacity: 1;
-  border-radius:4rem 12rem;
-
+  border-radius: 4rem 12rem;
 }
 
 #whyus dd {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--color-text-gray);
-    grid-column:span 2;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-text-gray);
+  grid-column: span 2;
 }
 
-
-@media (min-width:800px){
+@media (min-width: 800px) {
   #whyus {
     margin-top: 17.7rem;
-
   }
   #whyus header {
     flex-direction: row;
@@ -78,7 +81,7 @@
 
   #whyus header h4 {
     line-height: 120%;
-    margin-top:0;
+    margin-top: 0;
   }
   #whyus .content {
     flex-direction: row;
