@@ -1,0 +1,14 @@
+#contact {
+    margin-top: 14rem;
+}
+
+#contact header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact iframe {
+    margin-top: 6rem;
+}

@@ -1,0 +1,118 @@
+/*Hero*/
+#hero {
+    display: flex;
+    flex-direction: column;
+    margin-top: 11.8rem;
+  }
+  
+  #hero .hero-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #hero .hero-description h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    margin-bottom: 4rem;
+    color: var(--color-text-black);
+    max-width: 68rem;
+  }
+  
+  #hero .hero-description h2 span {
+    color: var(--color-main-blue);
+  }
+  
+  #hero .hero-description p {
+    margin-bottom: 6.2rem;
+    max-width: 55rem;
+    color: var(--color-text-gray);
+  }
+  
+  #hero .hero-description .links {
+    margin-bottom: 9rem;
+  }
+  
+  #hero dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  
+  #hero dt {
+    grid-row-start: 1;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 100%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  #hero dt::before {
+    content: "";
+    width: 4.1rem;
+    height: 4.5rem;
+    position: absolute;
+    left: 0.2rem;
+    top: -2rem;
+    z-index: -1;
+    opacity: 1;
+    border-radius: 12rem 16rem 2rem 1rem;
+    transform: rotate(-55.53deg);
+  }
+  
+  dt.orange::before {
+    background: var(--color-orange);
+  }
+  
+  dt.blue::before {
+    background: var(--color-main-blue);
+  }
+  dt.green::before {
+    background: var(--color-green);
+  }
+  #hero dd {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 130%;
+    text-align: center;
+    color: var(--color-text-gray);
+  }
+  
+  #hero .hero-image {
+    position: absolute;
+    left: 74rem;
+    top: 5rem;
+    z-index: -1;
+    max-width: 119rem;
+  }
+  
+  #hero .hero-brands {
+    background-color: var(--color-fafa);
+    padding: 7.4rem 8.2rem;
+    border-radius: 15rem;
+  }
+  
+  
+  #hero .hero-brands ul {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    list-style: '🏡 ';
+  }
+  
+  #hero .hero-brands li {
+    color: var(--color-main-blue);
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  #hero .vector {
+    position: absolute;
+    top:60rem ;
+    left: 0;
+  }

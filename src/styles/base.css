@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-coverflow";
+
+@import url("components.css");
+@import url("../components/Navbar/navbar.css");
+@import url("../components/Hero/hero.css");
+@import url("../components/WhyUs/whyus.css");
+@import url("../components/Projects/project.css");
+@import url("../components/ContactUs/contact.css");
+@import url("../components/Footer/footer.css");

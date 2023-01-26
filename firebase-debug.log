@@ -1,0 +1,113 @@
+[debug] [2023-01-25T19:08:51.378Z] ----------------------------------------------------------------------
+[debug] [2023-01-25T19:08:51.378Z] Command:       /Users/huseyin/.volta/tools/image/node/16.16.0/bin/node /Users/huseyin/.volta/tools/image/packages/firebase-tools/bin/firebase deploy --debug
+[debug] [2023-01-25T19:08:51.379Z] CLI Version:   11.21.0
+[debug] [2023-01-25T19:08:51.379Z] Platform:      darwin
+[debug] [2023-01-25T19:08:51.379Z] Node Version:  v16.16.0
+[debug] [2023-01-25T19:08:51.383Z] Time:          Wed Jan 25 2023 22:08:51 GMT+0300 (GMT+03:00)
+[debug] [2023-01-25T19:08:51.383Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-25T19:08:51.417Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-25T19:08:51.418Z] > authorizing via signed-in user (huseyinaltikulac4@gmail.com)
+[debug] [2023-01-25T19:08:51.418Z] [iam] checking project test-project-351217 for permissions ["firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-01-25T19:08:51.419Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/test-project-351217:testIamPermissions [none]
+[debug] [2023-01-25T19:08:51.419Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/test-project-351217:testIamPermissions x-goog-quota-user=projects/test-project-351217
+[debug] [2023-01-25T19:08:51.419Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test-project-351217:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-01-25T19:08:52.536Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/test-project-351217:testIamPermissions 200
+[debug] [2023-01-25T19:08:52.536Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/test-project-351217:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-01-25T19:08:52.538Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/test-project-351217 [none]
+[debug] [2023-01-25T19:08:52.965Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/test-project-351217 200
+[debug] [2023-01-25T19:08:52.966Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/test-project-351217 {"projectId":"test-project-351217","projectNumber":"428745148841","displayName":"test-project","name":"projects/test-project-351217","resources":{"hostingSite":"test-project-351217","realtimeDatabaseInstance":"test-project-351217-default-rtdb","storageBucket":"test-project-351217.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_c2dccf38-33dd-4ea5-9e59-6eac806a2157"}
+[info] 
+[info] === Deploying to 'test-project-351217'...
+[info] 
+[info] i  deploying storage, hosting 
+[debug] [2023-01-25T19:08:52.968Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/test-project-351217 [none]
+[debug] [2023-01-25T19:08:53.581Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/test-project-351217 200
+[debug] [2023-01-25T19:08:53.581Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/test-project-351217 {"name":"apps/test-project-351217","id":"test-project-351217","authDomain":"gmail.com","locationId":"us-central","codeBucket":"staging.test-project-351217.appspot.com","servingStatus":"SERVING","defaultHostname":"test-project-351217.uc.r.appspot.com","defaultBucket":"test-project-351217.appspot.com","serviceAccount":"test-project-351217@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_DATASTORE_COMPATIBILITY","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2023-01-25T19:08:53.584Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/test-project-351217:test [none]
+[debug] [2023-01-25T19:08:53.584Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/test-project-351217:test [omitted]
+[debug] [2023-01-25T19:08:54.576Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/test-project-351217:test 200
+[debug] [2023-01-25T19:08:54.576Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/test-project-351217:test {}
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully 
+[debug] [2023-01-25T19:08:54.581Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/versions [none]
+[debug] [2023-01-25T19:08:54.581Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-01-25T19:08:56.314Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/versions 200
+[debug] [2023-01-25T19:08:56.314Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/versions {"name":"projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-01-25T19:08:56.317Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/test-project-351217/releases pageSize=10&pageToken=
+[debug] [2023-01-25T19:08:57.179Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/test-project-351217/releases 200
+[debug] [2023-01-25T19:08:57.179Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/test-project-351217/releases {"releases":[{"name":"projects/test-project-351217/releases/firebase.storage/test-project-351217.appspot.com","rulesetName":"projects/test-project-351217/rulesets/75832287-802a-4501-8879-049158eec1f0","createTime":"2023-01-25T16:09:36.533490Z","updateTime":"2023-01-25T19:07:37.861995Z"}]}
+[debug] [2023-01-25T19:08:57.180Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/test-project-351217/rulesets/75832287-802a-4501-8879-049158eec1f0 [none]
+[debug] [2023-01-25T19:08:58.054Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/test-project-351217/rulesets/75832287-802a-4501-8879-049158eec1f0 200
+[debug] [2023-01-25T19:08:58.055Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/test-project-351217/rulesets/75832287-802a-4501-8879-049158eec1f0 [omitted]
+[info] i  storage: latest version of storage.rules already up to date, skipping upload... 
+[info] i  hosting[test-project-351217]: beginning deploy... 
+[info] i  hosting[test-project-351217]: found 4 files in public 
+[debug] [2023-01-25T19:08:58.065Z] [hosting] uploading with 200 concurrency
+[debug] [2023-01-25T19:08:58.068Z] [hosting] hash cache [cHVibGlj] stored for 4 files
+[debug] [2023-01-25T19:08:58.068Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":2}
+[debug] [2023-01-25T19:08:58.069Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a:populateFiles [none]
+[debug] [2023-01-25T19:08:58.069Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a:populateFiles {"files":{"/favicon.ico":"04614fc32690cb60b39e472119b7f7aa91d88eaeb8511a7489f8cbe1552e6e59","/next.svg":"33c5c6ad1d08bb69d8026289530e377b4d6e2a96f24562e209fd1e1e9ccee64a","/thirteen.svg":"15a00ba14c06deda6f14cc1ab3adeb0368e868f9b93a539f247847434ae671a1","/vercel.svg":"4b9c0f01017bb87197f2ae0bd9717239fadf854131b34cce7b0f74ff6d513a4b"}}
+[debug] [2023-01-25T19:08:59.271Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a:populateFiles 200
+[debug] [2023-01-25T19:08:59.271Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/test-project-351217/versions/0344a22a3bf94f4a/files"}
+[debug] [2023-01-25T19:08:59.272Z] [hosting][populate queue][FINAL] {"max":1205,"min":1205,"avg":1205,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1205}
+[debug] [2023-01-25T19:08:59.272Z] [hosting] uploads queued: 0
+[debug] [2023-01-25T19:08:59.272Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1674673739272}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[test-project-351217]: file upload complete 
+[debug] [2023-01-25T19:08:59.272Z] [hosting] deploy completed after 1213ms
+[debug] [2023-01-25T19:08:59.274Z] [rules] releasing firebase.storage/test-project-351217.appspot.com with ruleset projects/test-project-351217/rulesets/75832287-802a-4501-8879-049158eec1f0
+[debug] [2023-01-25T19:08:59.274Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/test-project-351217/releases/firebase.storage/test-project-351217.appspot.com [none]
+[debug] [2023-01-25T19:08:59.274Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/test-project-351217/releases/firebase.storage/test-project-351217.appspot.com {"release":{"name":"projects/test-project-351217/releases/firebase.storage/test-project-351217.appspot.com","rulesetName":"projects/test-project-351217/rulesets/75832287-802a-4501-8879-049158eec1f0"}}
+[debug] [2023-01-25T19:09:00.315Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/test-project-351217/releases/firebase.storage/test-project-351217.appspot.com 200
+[debug] [2023-01-25T19:09:00.316Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/test-project-351217/releases/firebase.storage/test-project-351217.appspot.com {"name":"projects/test-project-351217/releases/firebase.storage/test-project-351217.appspot.com","rulesetName":"projects/test-project-351217/rulesets/75832287-802a-4501-8879-049158eec1f0","createTime":"2023-01-25T16:09:36.533490Z","updateTime":"2023-01-25T19:09:00.359500Z"}
+[debug] [2023-01-25T19:09:00.316Z] [rules] updated release projects/test-project-351217/releases/firebase.storage/test-project-351217.appspot.com
+[info] ✔  storage: released rules storage.rules to firebase.storage 
+[debug] [2023-01-25T19:09:00.317Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "nextServer"
+          }
+        }
+      ],
+      "site": "test-project-351217"
+    },
+    "version": "projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a"
+  }
+]
+[info] i  hosting[test-project-351217]: finalizing version... 
+[debug] [2023-01-25T19:09:00.319Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/test-project-351217/locations/-/functions [none]
+[debug] [2023-01-25T19:09:01.004Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/test-project-351217/locations/-/functions 200
+[debug] [2023-01-25T19:09:01.004Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/test-project-351217/locations/-/functions {}
+[debug] [2023-01-25T19:09:01.005Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/test-project-351217/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-01-25T19:09:02.258Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/test-project-351217/locations/-/functions 200
+[debug] [2023-01-25T19:09:02.259Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/test-project-351217/locations/-/functions {}
+[warn] ⚠  hosting[test-project-351217]: Unable to find a valid endpoint for function `nextServer`, but still including it in the config 
+[debug] [2023-01-25T19:09:02.261Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/versions/0344a22a3bf94f4a updateMask=status%2Cconfig
+[debug] [2023-01-25T19:09:02.261Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/versions/0344a22a3bf94f4a {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","function":"nextServer"}]}}
+[debug] [2023-01-25T19:09:03.484Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/versions/0344a22a3bf94f4a 200
+[debug] [2023-01-25T19:09:03.484Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/versions/0344a22a3bf94f4a {"name":"projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","function":"nextServer"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-25T19:08:55.774949Z","createUser":{"email":"huseyinaltikulac4@gmail.com"},"finalizeTime":"2023-01-25T19:09:03.497906Z","finalizeUser":{"email":"huseyinaltikulac4@gmail.com"}}
+[debug] [2023-01-25T19:09:03.485Z] [hosting] finalized version for test-project-351217:[object Object]
+[info] ✔  hosting[test-project-351217]: version finalized 
+[info] i  hosting[test-project-351217]: releasing new version... 
+[debug] [2023-01-25T19:09:03.486Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/channels/live/releases versionName=projects%2F428745148841%2Fsites%2Ftest-project-351217%2Fversions%2F0344a22a3bf94f4a
+[debug] [2023-01-25T19:09:03.486Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/channels/live/releases {}
+[debug] [2023-01-25T19:09:04.740Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/channels/live/releases 200
+[debug] [2023-01-25T19:09:04.740Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/test-project-351217/channels/live/releases {"name":"projects/428745148841/sites/test-project-351217/channels/live/releases/1674673744188999","version":{"name":"projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","function":"nextServer"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-25T19:08:55.774949Z","createUser":{"email":"huseyinaltikulac4@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp62MTFSUGbxW250KWs2BMb09kDxFWvzjodnrGDRuA"},"finalizeTime":"2023-01-25T19:09:03.497906Z","finalizeUser":{"email":"huseyinaltikulac4@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp62MTFSUGbxW250KWs2BMb09kDxFWvzjodnrGDRuA"}},"type":"DEPLOY","releaseTime":"2023-01-25T19:09:04.188999629Z","releaseUser":{"email":"huseyinaltikulac4@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp62MTFSUGbxW250KWs2BMb09kDxFWvzjodnrGDRuA"}}
+[debug] [2023-01-25T19:09:04.741Z] [hosting] release: {"name":"projects/428745148841/sites/test-project-351217/channels/live/releases/1674673744188999","version":{"name":"projects/428745148841/sites/test-project-351217/versions/0344a22a3bf94f4a","status":"FINALIZED","config":{"rewrites":[{"glob":"**","function":"nextServer"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-01-25T19:08:55.774949Z","createUser":{"email":"huseyinaltikulac4@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp62MTFSUGbxW250KWs2BMb09kDxFWvzjodnrGDRuA"},"finalizeTime":"2023-01-25T19:09:03.497906Z","finalizeUser":{"email":"huseyinaltikulac4@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp62MTFSUGbxW250KWs2BMb09kDxFWvzjodnrGDRuA"}},"type":"DEPLOY","releaseTime":"2023-01-25T19:09:04.188999629Z","releaseUser":{"email":"huseyinaltikulac4@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp62MTFSUGbxW250KWs2BMb09kDxFWvzjodnrGDRuA"}}
+[info] ✔  hosting[test-project-351217]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/test-project-351217/overview
+[info] Hosting URL: https://test-project-351217.web.app

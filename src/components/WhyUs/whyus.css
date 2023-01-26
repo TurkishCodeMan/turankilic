@@ -1,0 +1,64 @@
+#whyus {
+  margin-top: 17.7rem;
+}
+
+#whyus header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11rem;
+}
+
+#whyus .explore p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: var(--color-text-gray);
+  margin-bottom: 3rem;
+}
+
+#whyus header h4 {
+  font-size: 5.4rem;
+  line-height: 120%;
+  font-weight: 500;
+}
+
+#whyus .content {
+  display: flex;
+  /* flex-flow: row wrap; */
+  align-items: center;
+  gap: 6.8rem;
+}
+
+#whyus dl {
+  display: grid;
+  row-gap: 14.2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+#whyus dt {
+  font-weight: 600;
+  font-size: 7.2rem;
+  color: var(--color-text-black);
+  line-height: 100%;
+  position: relative;
+}
+#whyus dt::before {
+  content: "";
+  width: 7.6rem;
+  height: 7.6rem;
+  position: absolute;
+  left: 0rem;
+  bottom: -3rem;
+  z-index: -1;
+  opacity: 1;
+  border-radius:4rem 12rem;
+
+}
+
+#whyus dd {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--color-text-gray);
+    grid-column:span 2;
+}
