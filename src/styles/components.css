@@ -4,8 +4,15 @@ a {
 }
 
 .wrapper {
-  padding: 5rem 13.5rem;
+  padding: 1rem 3rem;
 }
+
+@media (min-width:800px){
+  .wrapper {
+    padding: 5rem 13.5rem;
+  }
+}
+
 
 /*Button*/
 .btn {

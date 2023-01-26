@@ -15,6 +15,7 @@ footer {
 
 footer > div {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -23,6 +24,7 @@ footer ul {
 }
 
 footer > p {
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -30,4 +32,14 @@ footer .vector {
   position: absolute;
   bottom: -12rem;
   right: 0;
+}
+
+footer address {
+  padding: 2rem 0;
+}
+
+@media (min-width:800px){
+  footer div {
+    flex-direction: row;
+  }
 }

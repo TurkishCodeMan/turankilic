@@ -1,24 +1,107 @@
-header {
+header .logo {
   display: flex;
   justify-content: space-between;
-
 }
-
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 nav {
-    position: relative;
+  position: fixed;
+  left: -20rem;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: visible;
+  transition: left 0.3s ease;
+  z-index: 999;
+  display: none;
 }
 
-
 nav ul {
-    display: flex;
-    list-style-type: none;
-    gap: 3.5rem;
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 2.7rem;
+  display: flex;
+  flex-direction: column;
+  list-style-type: "";
+  gap: 3.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+  margin: 0;
+  padding-top: 2.5em;
+  min-height: 100%;
+  width: 20rem;
+  background-color: var(--color-fafa);
+  opacity: 0.9;
+  align-items: center;
+}
+
+nav .menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 nav ul li.selected {
-    font-weight: 600;
+  font-weight: 600;
+}
+
+nav:target {
+  display: block;
+  left: 0;
+  outline: none;
+}
+
+nav:target .menu-close {
+  z-index: 1001;
+}
+
+nav:target ul {
+  position: relative;
+  z-index: 1000;
+}
+
+nav:target + .backdrop {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+@media (min-width: 800px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .vector {
+    display: none;
+  }
+  .menu-toggle,
+  nav .menu-close {
+    display: none;
+  }
+  nav {
+    position: static;
+    display: block;
+  }
+  nav ul {
+    padding: 0;
+    height: auto;
+    width: auto;
+    background: none;
+    overflow: hidden;
+    text-align: center;
+    flex-direction: row;
+  }
 }

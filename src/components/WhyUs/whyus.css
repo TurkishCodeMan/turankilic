@@ -1,11 +1,12 @@
 #whyus {
-  margin-top: 17.7rem;
+  margin-top: 5rem;
 }
 
 #whyus header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 11rem;
 }
 
@@ -18,20 +19,22 @@
 
 #whyus header h4 {
   font-size: 5.4rem;
-  line-height: 120%;
+  line-height: 100%;
   font-weight: 500;
+  margin-top: 5rem;
 }
 
 #whyus .content {
   display: flex;
   /* flex-flow: row wrap; */
+  flex-direction: column;
   align-items: center;
   gap: 6.8rem;
 }
 
 #whyus dl {
   display: grid;
-  row-gap: 14.2rem;
+  row-gap: 7.2rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
 }
@@ -61,4 +64,26 @@
     font-weight: 400;
     color: var(--color-text-gray);
     grid-column:span 2;
+}
+
+
+@media (min-width:800px){
+  #whyus {
+    margin-top: 17.7rem;
+
+  }
+  #whyus header {
+    flex-direction: row;
+  }
+
+  #whyus header h4 {
+    line-height: 120%;
+    margin-top:0;
+  }
+  #whyus .content {
+    flex-direction: row;
+  }
+  #whyus dl {
+    row-gap: 14.2rem;
+  }
 }

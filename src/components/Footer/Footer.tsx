@@ -26,11 +26,11 @@ export function Footer() {
         <br />
         kaiju@example.com
         <br />
-        <a href="https://twitter.com/" target="_blank">
+        <a href="https://twitter.com/" >
           Twitter
         </a>
         <br />
-        <a href="https://www.facebook.com/" target="_blank">
+        <a href="https://www.facebook.com/" >
           Facebook
         </a>
       </address>
@@ -39,7 +39,7 @@ export function Footer() {
      <p>
         <small>
           Disclaimer: Beydağı İnşaat
-          <a href="https://beydaginsaat.com/#home" target="_blank">
+          <a href="https://beydaginsaat.com/#home">
             Beydağı İnşaat
           </a>
           by Hüseyin ALTIKULAÇ in 2023.
