@@ -22,9 +22,9 @@ export function Hero() {
           </div>
 
           <dl>
-            <dt className="orange">25,356</dt>
+            <dt className="orange">80</dt>
             <dd>Tamamlanan Proje</dd>
-            <dt className="blue">15,200</dt>
+            <dt className="blue">90</dt>
             <dd>Devam Eden Proje</dd>
             <dt className="green">50+</dt>
             <dd>Çalışanlar</dd>
