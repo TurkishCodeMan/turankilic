@@ -6,6 +6,7 @@
   --color-text-gray: #6b6b6b;
   --color-text-black: #313131;
   --color-fafa: #fafafa;
+  --color-shadow:rgba(0,0,0,0.1);
 
   --box-shadow-blue: 0px 64.8148px 46.8519px 50px rgba(24, 167, 185, 0.0759259),
     0px 38.5185px 25.4815px rgba(24, 167, 185, 0.0607407),
@@ -16,10 +17,12 @@
 
 body.dark {
   --color-main-blue: #18a7b9;
-  --color-fafa: black;
+  --color-fafa: rgb(255, 251, 251);
   --color-text-black: #fff;
   --color-text-gray: #fefefe;
   --color-white: #000;
+  --color-shadow:rgba(249, 243, 243, 0.4);
+
 }
 
 @media (prefers-color-scheme: dark) {

@@ -5,12 +5,17 @@ import { FaBackspace, FaHamburger, FaMoon, FaSun } from "react-icons/fa";
 import { HiMenu } from "react-icons/hi";
 import { useLocalStorage } from "usehooks-ts";
 
+export const useLoaded = () => {
+  const [loaded, setLoaded] = React.useState(false);
+  React.useEffect(() => setLoaded(true), []);
+  return loaded;
+};
 export function Navbar() {
   const router = useRouter();
   const path = router.pathname;
   const [isDarkTheme, setDarkTheme] = useLocalStorage("dark-mode", true);
 
-
+  const loaded = useLoaded();
   React.useEffect(()=>{
     if(isDarkTheme) {
       return window.document.body.classList.add('dark')
@@ -43,15 +48,20 @@ export function Navbar() {
           <li className={path == "/" ? "selected" : ""}>
             <Link href="/">Anasayfa</Link>
           </li>
-          <li>
+          {
+            path!='/gallery' &&  <li>
             <Link href="#whyus">Biz Kimiz</Link>
           </li>
+          }
+        
           <li className={path == "/gallery" ? "selected" : ""}>
             <Link href="/gallery">Galeri</Link>
           </li>
-          <li>
+          {
+            path!='/gallery' && <li>
             <Link href="#contact">İletişim</Link>
           </li>
+          }
           <li>
             <label htmlFor="dark">
               <input
@@ -61,7 +71,7 @@ export function Navbar() {
                 id="dark"
               />
               <span className="ball">
-                {isDarkTheme ? (
+                {isDarkTheme && loaded ? (
                   <FaSun color="#F0BB00" />
                 ) : (
                   <FaMoon color="#F0BB00" />

@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
+@import 'react-medium-image-zoom/dist/styles.css';
 
 @import "swiper/css";
 @import "swiper/css/pagination";
 @import "swiper/css/effect-coverflow";
+@import "swiper/css/navigation";
 
 @import url("components.css");
 @import url("../components/Navbar/navbar.css");
@@ -12,3 +13,5 @@
 @import url("../components/Projects/project.css");
 @import url("../components/ContactUs/contact.css");
 @import url("../components/Footer/footer.css");
+@import url("../components/GalleryContent/gallery-content.css");
+@import url("../components/GalleryPreview/gallery-preview.css");

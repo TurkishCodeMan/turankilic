@@ -1,0 +1,25 @@
+.gallery-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.gallery-content h2 {
+  margin-top: 2rem;
+  color: var(--color-text-black);
+}
+
+.gallery-content .list {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(1, minmax(4rem, 1fr));
+  column-gap: 1rem;
+  row-gap: 1rem;
+  transition:  1s;
+}
+
+@media (min-width: 800px) {
+  .gallery-content .list {
+    grid-template-columns: repeat(3, minmax(4rem, 1fr));
+  }
+}
