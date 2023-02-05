@@ -38,19 +38,43 @@ export function Hero() {
       <div className="hero-brands">
         <ul>
           <li>
-            <span>Hase</span>
+            <span>Çağlayan Adalet Sarayı</span>
           </li>
           <li>
-            <span>Asana</span>
+            <span>Beşiktaş Stadı+</span>
           </li>
           <li>
-            <span>Buzzzz</span>
+            <span>Fi Yapı</span>
           </li>
           <li>
-            <span>Toggle </span>
+            <span>İnovia Evleri </span>
           </li>
           <li>
-            <span>Walmart</span>
+            <span>Nida Kule Göztepe</span>
+          </li>
+          <li>
+            <span>Tahinci Oğlu Paladyum</span>
+          </li>
+          <li>
+            <span>Nida Park Ayazağa</span>
+          </li>
+          <li>
+            <span>Atmaca Gayrimenkul </span>
+          </li>
+          <li>
+            <span>Atmaca Gayrimenkul </span>
+          </li>
+          <li>
+            <span>Bahçeşehir Zincir Yapı </span>
+          </li>
+          <li>
+            <span>Ispartakule </span>
+          </li>
+          <li>
+            <span>Bakırcı Topkapı </span>
+          </li>
+          <li>
+            <span>Demsar </span>
           </li>
         </ul>
       </div>

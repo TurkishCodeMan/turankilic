@@ -105,8 +105,9 @@ dt.green::before {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  list-style: "🏡 ";
-  gap: 1rem;
+  list-style: "🏗 ";
+  gap: 4rem;
+  text-align: center;
 
 }
 

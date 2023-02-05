@@ -1,7 +1,7 @@
 import GalleryPreview from "@/components/GalleryPreview";
 
 export default function GalleryContent({ posts }: any) {
-  console.log(posts);
+
   return (
     <div className="gallery-content">
       <h2>Fotoğraf Galerisi</h2>

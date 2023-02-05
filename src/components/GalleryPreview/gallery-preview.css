@@ -36,15 +36,16 @@ article figcaption {
   display: none;
 }
 
-article.gallery-image:hover {
-  z-index: 1000;
-  transition: 0.7s;
-  transform: scale(1.5);
-}
+
 
 article.gallery-image:hover figcaption {
     display: block;
 }
 
 @media (min-width: 800px) {
+  article.gallery-image:hover {
+    z-index: 1000;
+    transition: 0.7s;
+    transform: scale(1.5);
+  }
 }
